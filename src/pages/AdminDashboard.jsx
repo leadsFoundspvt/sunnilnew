@@ -4,6 +4,9 @@ import Topbar from "../components/admin/layout/Topbar";
 import Dashboard from "../components/admin/pages/Dashboard";
 import ReviewManagement from "../components/admin/pages/ReviewManagement";
 import PageManagement from "../components/admin/pages/PageManagement";
+import PrivacyManagement from "../components/admin/pages/PrivacyManagement";
+import TermsManagement from "../components/admin/pages/TermsManagement";
+
 const AdminDashboard = () => {
   const [activeSection, setActiveSection] = useState("dashboard");
 
@@ -16,6 +19,10 @@ const AdminDashboard = () => {
         return <PageManagement />;
       case "reviews":
         return <ReviewManagement />;
+      case "terms":
+        return <TermsManagement />;
+      case "privacy":
+        return <PrivacyManagement />;
       case "analytics":
         return (
           <div className="p-6">
